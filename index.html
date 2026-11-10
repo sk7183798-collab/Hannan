@@ -1,10 +1,204 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Hannan</title>
-  </head>
-  <body>
-    <h1>My name is Muhammad hannan</h1>
-    <p>welcome</p>
-  </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hannan Shoe | Official Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #f5a623;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    background: linear-gradient(120deg,#111,#444);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f5a623;
+    color: black;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin: 45px 0 25px;
+}
+
+.products {
+    padding: 20px 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.product img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 15px 0 8px;
+}
+
+.price {
+    color: #e58d00;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background: #111;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background: #f5a623;
+    color: black;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HANNAN SHOE</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Collection</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Hannan Shoe</h1>
+    <p>Step Into Style. Walk With Confidence.</p>
+    <a href="#products" class="btn">Shop Now</a>
+</section>
+
+<h2 id="products">Our Latest Collection</h2>
+
+<section class="products">
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Red sports shoes">
+        <h3>Sports Shoes</h3>
+        <p class="price">Rs. 3,500</p>
+        <button onclick="order('Sports Shoes',3500)">Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500" alt="Casual shoes">
+        <h3>Casual Shoes</h3>
+        <p class="price">Rs. 4,000</p>
+        <button onclick="order('Casual Shoes',4000)">Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" alt="Fashion shoes">
+        <h3>Fashion Shoes</h3>
+        <p class="price">Rs. 4,500</p>
+        <button onclick="order('Fashion Shoes',4500)">Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=500" alt="Sneakers">
+        <h3>Premium Sneakers</h3>
+        <p class="price">Rs. 5,000</p>
+        <button onclick="order('Premium Sneakers',5000)">Order Now</button>
+    </div>
+
+</section>
+
+<footer id="contact">
+    <h2>HANNAN SHOE</h2>
+    <p>Quality Shoes | Best Prices | Best Style</p>
+    <p>Contact Us For Orders</p>
+    <p>© 2026 Hannan Shoe. All Rights Reserved.</p>
+</footer>
+
+<script>
+function order(product, price) {
+    let phone = "923001234567";
+    let message = "Assalam o Alaikum! I want to order " +
+                  product + " for Rs. " + price;
+    window.open(
+        "https://wa.me/" + phone + "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
+
+</body>
 </html>
+
